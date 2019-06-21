@@ -6,6 +6,7 @@ with open(file_name, "r") as f:
     contents = f.readlines()        
 cuvinte = list(itertools.permutations(litere, nr_lit))
 
+cuvinte = list(dict.fromkeys(cuvinte))
 
 for i in cuvinte:
     i = "".join(i) + "\n"
