@@ -8,7 +8,7 @@ def index():
 
 @app.route("/process", methods=["POST"])
 def process():
-    litere = request.form["letters"]
+    litere = request.form["letters"].lower()
     nr_lit = int(request.form["len"])
     file_name ="cuv/" + str(nr_lit) + "lit.txt"
     with open(file_name, "r") as f:
