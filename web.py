@@ -8,20 +8,11 @@ def index():
 
 @app.route("/process", methods=["POST"])
 def process():
-    litere = request.form["letters"].lower()
-    nr_lit = int(request.form["len"])
-    file_name ="cuv/" + str(nr_lit) + "lit.txt"
-    with open(file_name, "r") as f:
-        contents = f.readlines()        
-    cuvinte = list(itertools.permutations(litere, nr_lit))
+    num1 = int(request.form["number1"])
+    num2 = int(request.form["number2"])
 
-    cuvinte = list(dict.fromkeys(cuvinte))
-    resultat = []
-    for i in cuvinte:
-        i = "".join(i) + "\n"
-        if i in contents:
-            resultat.append(i)
-    return jsonify({"result" : (''.join(str(i) for i in resultat))+'\n'})
+    resultat = num1 + num2
+    return jsonify({"result" : resultat})
 
 
 if __name__ == "__main__":

@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Picnic Cuvant</title>
+    <title>Calculator</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
-<body>  
-<div class="containter">    
-    <form class="form-inline">
-        <input type="text" class="form-control" id="text_box">
-        <input type="number" class="form-control" id="number_box" min="2" max="8">
-        <button type="submit" class="btn btn-default">Cauta</button>
+
+<body class="center">  
+<p>Calculeaza suma a doua numere</p>
+	
+	<div class="flex-container">    
+	  <form>
+			<div>  	<input type="number"  id="number_box1"> <div>
+					<div> 	<input type="number" id="number_box2"> <div>
+        <button type="submit" >Suma</button>
         <p id="rezultat"></p>
     </form>
+</div>
+
+<div class="flex-container">
 </div>
 </body>
 </html>

@@ -5,17 +5,18 @@ $(document).ready(function() {
 
 		$.ajax({
 			data : {
-	            letters : $('#text_box').val(),
-                len : $('#number_box').val()
+	            number1 : $('#number_box1').val(),
+              number2 : $('#number_box2').val()
             },
 			type : 'POST',
 			url : '/process'
 		})
 		.done(function(data) {
             $('#rezultat').text(data.result).show();			
-		});
+	});
 
 		event.preventDefault();
 
 	});
 });
+//sdfsdf
