@@ -1,12 +1,12 @@
 "use strict"
 $(document).ready(function() {
 
-	$('form').on('submit', function(event) {
-
+	// $('form').on('submit', function(event) {
+  $('button').click(function(){
 		$.ajax({
 			data : {
 	            letters : $('#text_box').val(),
-                len : $('#number_box').val()
+                len : this.id
             },
 			type : 'POST',
 			url : '/process'
