@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Picnic Cuvant</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <link  rel ="stylesheet"   href="{{ url_for('static', filename='css/style.css') }}" >
 
-</head>
+
+
+  </head>
 <body>  
-<div class="containter">    
+
+
+
+
+
+
+
     <form class="form-inline">
+<div class="container">    
+<h2>Gaseste solutiile pentru Picnic Cuvant!</h2>
+
+        <p>Intrudu literele</p>
         <input type="text" class="form-control" id="text_box">
-        <input type="number" class="form-control" id="number_box" min="2" max="8">
-        <button type="submit" class="btn btn-default">Cauta</button>
+        <p>Din cate litere trebuie sa fie cuvantul: </p>
+        <input type="number" class="padding-down" id="number_box" min="2" max="8">
+        <button type="submit" class ='uploadButton'>Cauta</button>
         <p id="rezultat"></p>
-    </form>
 </div>
+    </form>
 </body>
 </html>
