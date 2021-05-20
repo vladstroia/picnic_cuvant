@@ -1,6 +1,5 @@
 "use strict"
 $(document).ready(function() {
-  document.getElementById("mesaj_rezultat").style.display = "none";
 
             // $('#mesaj_rezultat').style.display ="none";	
 	// $('form').on('submit', function(event) {
@@ -14,8 +13,12 @@ $(document).ready(function() {
 			url : '/process'
 		})
 		.done(function(data) {
-            $('#rezultat').text(data.result).show();	
-  document.getElementById("mesaj_rezultat").style.display = "block";
+            $('#rezultat').text(data.result).show();
+            
+            if(data.result.length > 1)
+              document.getElementById("mesaj_rezultat").innerHTML = "Solutiile sunt:";
+            else
+              document.getElementById("mesaj_rezultat").innerHTML = "Nu exista solutii";
 
 		});
 
