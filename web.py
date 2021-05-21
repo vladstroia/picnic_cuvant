@@ -17,8 +17,13 @@ def process():
         contents = f.readlines()        
     cuvinte = list(itertools.permutations(litere, nr_lit))
 
-    resultat = num1 + num2
-    return jsonify({"result" : resultat})
+    cuvinte = list(dict.fromkeys(cuvinte))
+    resultat = []
+    for i in cuvinte:
+        i = "".join(i) + "\n"
+        if i in contents:
+            resultat.append(i)
+    return jsonify({"result" : (''.join(str(i) for i in resultat))+'\n'})
 
 
 if __name__ == "__main__":
