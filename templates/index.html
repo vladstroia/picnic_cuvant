@@ -1,27 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <title>Picnic Cuvant</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/number_field.js') }}"></script>
+    <link  rel ="stylesheet"   href="{{ url_for('static', filename='css/style.css') }}" >
 
-</head>
 
-<body class="center">  
-<p>Calculeaza suma a doua numere</p>
-	
-	<div class="flex-container">    
-	  <form>
-			<div>  	<input type="number"  id="number_box1"> <div>
-					<div> 	<input type="number" id="number_box2"> <div>
-        <button type="submit" >Suma</button>
+
+  </head>
+<body>  
+
+
+
+
+
+
+
+    <!-- <form class="form-inline">
+<div class="container">    
+<h2>Gaseste solutiile pentru Picnic Cuvant!</h2>
+
+        <p>Intrudu literele</p>
+        <input type="text" class="form-control" id="text_box">
+        <p>Din cate litere trebuie sa fie cuvantul: </p>
+
+
+        <div class="quantity buttons_added">
+          <input type="button" id="number_box" value="-" class="minus"><input type="number" step="1" min="2" max="8" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+        </div>
+
+
+        <button type="submit" class ='uploadButton'>Cauta</button>
         <p id="rezultat"></p>
+</div>
     </form>
+ -->
+
+
+
+ <div class="container">
+
+<h2>Gaseste solutiile pentru Picnic Cuvant!</h2>
+
+        <p>Intrudu literele</p>
+        <input type="text" class="text-input" id="text_box">
+        <p>Din cate litere trebuie sa fie cuvantul: </p>
+
+  <div class="first-row">  
+   <button class="uploadButton" id="2" >2</button>
+   <button class="uploadButton" id="3" >3</button>
+   <button class="uploadButton" id="4" >4</button>
+
 </div>
 
-<div class="flex-container">
+<div class="second-row">
+   <button class="uploadButton" id="5" >5</button>
+   <button class="uploadButton" id="6" >6</button>
+   <button class="uploadButton" id="7" >7</button>
+   <button class="uploadButton" id="8" >8</button>
 </div>
+<p id="mesaj_rezultat" ></p>
+        <p id="rezultat"></p>
+
+ </div>
+
+
+
+
 </body>
 </html>

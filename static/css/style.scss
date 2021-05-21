@@ -1,9 +1,14 @@
 body {
-  background-color: #32b6cd;
+  background-color: rgb(50, 182, 205);
+}
+
+body {
+  // font: 16px sans-serif;
 }
 
 .container {
-  background-color: #ecdd52;
+  background-color: rgb(236, 221, 82);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +21,7 @@ body {
   padding: 0.5rem 1rem;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
-
+// upload file button
 .uploadButton {
   text-decoration: none;
   border: none;
@@ -32,7 +37,6 @@ body {
   border: 2px solid #1e73be;
   margin-top: 16px;
 }
-
 .uploadButton:hover {
   background-color: #1e73be;
   color: white;
@@ -46,4 +50,4 @@ body {
   text-decoration: none;
   font-size: small;
   padding: 10px;
-} /*# sourceMappingURL=style.css.map */
+}

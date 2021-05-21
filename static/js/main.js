@@ -1,19 +1,26 @@
 "use strict"
 $(document).ready(function() {
 
-	$('form').on('submit', function(event) {
-
+            // $('#mesaj_rezultat').style.display ="none";	
+	// $('form').on('submit', function(event) {
+  $('button').click(function(){
 		$.ajax({
 			data : {
-	            number1 : $('#number_box1').val(),
-              number2 : $('#number_box2').val()
+	            letters : $('#text_box').val(),
+                len : this.id
             },
 			type : 'POST',
 			url : '/process'
 		})
 		.done(function(data) {
-            $('#rezultat').text(data.result).show();			
-	});
+            $('#rezultat').text(data.result).show();
+            
+            if(data.result.length > 1)
+              document.getElementById("mesaj_rezultat").innerHTML = "Solutiile sunt:";
+            else
+              document.getElementById("mesaj_rezultat").innerHTML = "Nu exista solutii";
+
+		});
 
 		event.preventDefault();
 
